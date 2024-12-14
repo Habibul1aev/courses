@@ -1,0 +1,70 @@
+{% load static %}
+{% block links %}
+<link rel="stylesheet" href="{% static "../static/css/components/footer.css" %}">
+{% endblock links %}
+
+<div class="footer-back">
+    <div class="container">
+        <div class="footer-all">
+            <div class="footer-colm1">
+                <div class="footer-colm1-img">
+                    <img src="{% static "../static\img\Logo (1).png" %}" alt="">
+                </div>
+                <div class="footer-colm1-number-and-email">
+                    <div class="footer-colm1-number">
+                        <img src="{% static "../static\img\🦆 icon _phone_.png" %}" alt="">
+                        <h3>+63 919-330-3237</h3>
+                    </div>
+                    <div class="footer-colm1-email">
+                        <img src="{% static "../static\img\🦆 icon _mail_.png" %}" alt="">
+                        <h3>englishcourses@email.com</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-colm2">
+                <div class="programs">
+                    <div class='programs-h1'><h1>Программы</h1></div>
+                    <div class='programs-h2'><a href="{% url "statistic" %}">Статистика</a></div>
+                    <div class='programs-h2'><h2>Подготовка к IELTS</h2></div>
+                    <div class='programs-h2'><h2>Бизнес-английский</h2></div>
+                    <div class='programs-h2'><h2>Английский для IT</h2></div>
+                    <div class='programs-h2'><h2>Семейные программы</h2></div>
+                </div>
+            </div>
+            <div class="footer-colm3">
+                <div class="partners">
+                    <div class='partners-h1'><h1>Партнеры</h1></div>
+                    <div class='grid grid-cols-2 gap-2 mt-2'>
+                        <div class='partners-h2'><img src="{% static "../static\img\Aviasales Logo Horizontal 1.png" %}" alt=""></div>
+                    <div class='partners-h2'><img src="{% static "../static\img\PhilFun Travel.png" %}" alt=""></div>
+                    <div class='partners-h2'><img src="{% static "../static\img\Booking 1.png" %}" alt=""></div>
+                    <div class='partners-h2'><img src="{% static "../static\img\Aviasales Logo Horizontal 1.png" %}" alt=""></div>
+                    <div class='partners-h2'><img src="{% static "../static\img\PhilFun Travel.png" %}" alt=""></div>
+                    <div class='partners-h2'><img src="{% static "../static\img\Booking 1.png" %}" alt=""></div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-colm4">
+                <div class="contacts">
+                    <div class='contacts-h1'><h1>Контакты</h1></div>
+                    <div class='grid grid-cols-3 gap-4 mt-2'>
+                        <div class='contacts-h2'><img src="{% static "../static\img\socials.png" %}" alt=""></div>
+                        <div class='contacts-h2'><img src="{% static "../static\img\socials (1).png" %}" alt=""></div>
+                        <div class='contacts-h2'><img src="{% static "../static\img\socials (2).png" %}" alt=""></div>
+                        <div class='contacts-h2'><img src="{% static "../static\img\socials (3).png" %}" alt=""></div>
+                        <div class='contacts-h2'><img src="{% static "../static\img\socials (4).png" %}" alt=""></div>
+                        <div class='contacts-h2'><img src="{% static "../static\img\socials (5).png" %}" alt=""></div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="footer-line"></div>
+    <div class="container">
+        <div class="sss">
+            <h2 class='class1'>© Englishphilipines.com – Все права защищены</h2>
+            <h2 class='class2'>Политика конфиденциальности</h2>
+        </div>
+    </div>
+</div>

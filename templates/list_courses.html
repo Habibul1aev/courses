@@ -1,0 +1,208 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block links %}
+    <link rel="stylesheet" href="{% static "../static/css/list_courses.css" %}">
+{% endblock links %}
+
+{% comment %} {% block search %}
+    <div class="back-search">
+        <div class="container">
+            <div class="search">
+                <form action="" method='GET' class='form-search'>
+                    {{filter_set.form.as_p}}
+                
+                    <div class='flex items-center'>
+                        <button type='submit' class='btn-search'><img src="{% static "../static/img/Icon.png" %}" class='btn-search2' alt=""><h3 class='h3-btn'>Поиск</h3></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock search %} {% endcomment %}
+
+{% block detal %}
+    <div class="container">
+        {% for items in courses %}
+            <div class="list-name-and-share">
+                <div class="list-name">
+                    <h1>{{items.title}}</h1>
+                    <div class="location-and-reting">
+                        <div class='flex items-center justify-center m-0'><img src="{% static "../static\img\Icon (1).png" %}" alt=""> Local</div>
+                        <div class='flex items-center justify-center m-0 gap-2'><img src="{% static "../static\img\🦆 icon _star_.png" %}" alt=""> {{items.averge_retings}} (Отзывов)</div>
+                    </div>
+                </div>
+                <div class="list-share">
+                    <img src="{% static "../static\img\Icon (2).png" %}" alt="">
+                    Поделиться
+                </div>
+            </div>
+            <div class="photo">
+                <div class="big-photo">
+                    <img src="{{items.photo.url}}" alt="">
+                </div>
+                <div class="littel-photos">
+                    {% for photo in imags %}
+                        <img src="{{photo.image.url}}" alt="">
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="info-school-list">
+                <div class="info-list">
+                    <div class="info-category">
+                        <div><a>Описание</a></div>
+                        <div><a href='#cours-selects'>Курсы</a></div>
+                        <div><a href='#cours-selects-bad'>Проживание</a></div>
+                        <div><a href='#photo-galereay'>Фото</a></div>
+                        <div><a href='#ratings'>Отзывы</a></div>
+                        <div><a href='#geolacation'>Адрес</a></div>
+                    </div>
+                    <div class="o-school">
+                        <h1>О школе</h1>
+                        <h3>Diving  в 2007 году into the Beauty of the Island of the Gods, is a travel package that allows you to explore the beauty of the island of Bali, which is also known as the "Island of the Gods". On this trip, you will enter an amazing underwater world with amazing diving activities .</h3>
+                        <h3>Enjoy an extraordinary diving experience in Bali's waters which are famous for their marine biodiversity. You'll be taken to some of the island's best dive sites, including stunning coral reefs, shipwrecks and stunning underwater views.</h3>
+                    </div>
+                </div>
+                <div class="zayvka">
+                    <div class="kurs-and-dol">
+                        <h1>Курс</h1>
+                        <h2>500$</h2>
+                    </div>
+                    <div class="selsct-zayv">
+                        <select name="" id="" class='zyavkas'>
+                            <option value="1" selected>Общий английский (20 уроков)</option>
+                            <option value="2">Общий математика (20 уроков)</option>
+                            <option value="3">Общий история (20 уроков)</option>
+                            <option value="4">Общий русский (20 уроков)</option>
+                        </select>
+                        <select name="" id="" class='zyavkas'>
+                            <option value="1" selected>За 4 недели</option>
+                            <option value="2">За 5 недели</option>
+                            <option value="3">За 6 недели</option>
+                            <option value="4">За 7 недели</option>
+                        </select>
+                    </div>
+                    <div class="kurs-and-dol2">
+                        <h1>Проживание</h1>
+                        <h2>300$</h2>
+                    </div>
+                    <div class="selsct-zayv2">
+                        <select name="" id="" class='zyavkas2'>
+                            <option value="1" selected>Общежитие в кампусе школы</option>
+                            <option value="2">Отель</option>
+                            <option value="3">Без проживания</option>
+                        </select>
+                    </div>
+                    <div class="kurs-and-dol3">
+                        <h1>Сборы школы</h1>
+                        <h2>100$</h2>
+                    </div>
+                    <div class="btn-select">
+                        Отправить заявку
+                    </div>
+                </div>
+            </div>
+            <div id='cours-selects' class="cours-selects">
+                <h1>Курсы</h1>
+                <div class='cours-select-options'><img src="{% static "../static\img\+.png" %}" alt=""><h1>Курс подготовки к TOEIC (Интенсивный)</h1></div>
+                <div class='cours-select-options'><img src="{% static "../static\img\+.png" %}" alt=""><h1>Семейная программа для двоих</h1></div>
+                <div class='cours-select-options'><img src="{% static "../static\img\+.png" %}" alt=""><h1>Бизнес английский</h1></div>
+                <div class='cours-select-options'><img src="{% static "../static\img\+.png" %}" alt=""><h1>Курс подготовки к IELTS (Интенсивный)</h1></div>
+                <div class='cours-select-options'><img src="{% static "../static\img\+.png" %}" alt=""><h1>Общий английский</h1></div>
+            </div>
+            <div id='cours-selects-bad' class="cours-selects">
+                <h1>Проживание</h1>
+                <div class='cours-select-options'><img src="{% static "../static\img\+.png" %}" alt=""><h1>Одноместное проживание</h1></div>
+                <div class='cours-select-options'><img src="{% static "../static\img\+.png" %}" alt=""><h1>Двухместная проживание</h1></div>
+                <div class='cours-select-options'><img src="{% static "../static\img\+.png" %}" alt=""><h1>Трехместная проживание</h1></div>
+                <div class='cours-select-options'><img src="{% static "../static\img\+.png" %}" alt=""><h1>Дополнительные оплаты по проживанию</h1></div>
+                <div class='cours-select-options'><img src="{% static "../static\img\+.png" %}" alt=""><h1>Общий английский</h1></div>
+            </div>
+            <div id='photo-galereay' class="photo-galereay">
+                <h1>Фотогалерея</h1>
+                <div class="galereay">
+                    {% for photo in imags2 %}
+                        <img src="{{photo.image.url}}" alt="">
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="line-geolacation"></div>
+            <div id='geolacation' class="geolacation">
+                <h1>Адрес</h1>
+                <h3>Филиппины, город Себу, Маболо</h3>
+                <div class="carta">
+                    <div class="google-carta">
+                        <div class='flex gap-4 m-0'><img src="{% static "../static\img\Icon (1).png" %}" alt="">Филиппины, город Себу</div>
+                        <button class='h-[35px] w-[170px] bg-white rounded-[10px] flex items-center justify-center px-2.5 gap-4 m-0'><img src="{% static "../static\img\Vector.png" %}" alt="">Google Maps</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="line-geolacation"></div>
+            <div id='ratings' class="rating">
+                <h1>Рейтинг и отзывы</h1>
+                <h3>Мы составляем рейтинг на основе отзывов студентов</h3>
+                <div class='flex gap-[30px] pt-[20px]'>
+                    <div class='m-0 text-center'><h1 class='m-0 text-[58px]'>{{items.averge_retings}}</h1><p></p></div>
+                    <div class='m-0'><img src="{% static "..\static\img\Content.png" %}" alt="" class='w-[255px] m-0'></div>
+                </div>
+            </div>
+            <div class="pt-[30px]">
+                {% if comments %}
+                    {% for comment in comments %}
+                        <div class="w-[100%]">
+                            <div class="flex items-start p-4 bg-white">
+                              <img
+                                class="w-12 h-12 rounded-full mr-4"
+                                src="https://via.placeholder.com/50"
+                                alt="Avatar"
+                              />
+                              <div class="flex-1">
+                                <div class="flex justify-between items-center">
+                                  <h4 class="font-semibold text-lg">{{ comment.user.username }}</h4>
+                                </div>
+                                <div class="text-yellow-500 mt-1">⭐⭐⭐⭐</div>
+                                <p class="text-gray-700 mt-2">
+                                    {{ comment.text }}
+                                </p>
+                                <div class="flex items-center space-x-4 text-sm text-gray-500 mt-4">
+                                    {{ comment.created|date:"d M Y, H:i" }}
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                <h3></h3>
+                {% endif %}
+            </div>
+            <div class="sm:flex justify-end">
+                <form action="" method="POST" class="bg-white p-6 rounded-lg shadow-lg w-auto m-0 overflow-hidden sm:w-[350px] ">
+                    {% csrf_token %}
+                                        
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium text-gray-700 pb-[10px]">Ваш комментарий</label>
+                        {{form.as_p}}
+                        {{ form_comment.text }}
+                    </div>
+                    
+                    <div class="text-red-500 text-sm mt-2">
+                        {% for field in form_comment %}
+                            {% if field.errors %}
+                                <p>{{ field.errors }}</p>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                
+                    <div class="mt-6">
+                        <button type="submit" class="w-full bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            Прокомментировать
+                        </button>
+                    </div>
+                </form> 
+            </div>
+        {% endfor %}
+    </div>
+{% endblock detal %}
+
+                 

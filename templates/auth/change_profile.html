@@ -1,0 +1,67 @@
+{% extends "workspace/base.html" %}
+{% block title %}Change Profile{% endblock title %}
+{% block creat %}
+<div class="container mx-auto my-10">
+  <div class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg">
+    <h2 class="text-2xl font-semibold mb-4">Редактировать профиль</h2>
+
+    <form
+      action="{% url 'change_profile' %}"
+      method="POST"
+      class="space-y-4"
+      novalidate
+    >
+      {% csrf_token %}
+
+      <div class="mb-4">
+        <label for="username" class="block text-gray-700 font-semibold">Измени ник</label>
+        {{form.username}}
+        {% if form.username.errors %}
+            <div class="text-red-500 text-sm mt-1">
+              {% for error in form.username.errors %}
+              <p>{{ error }}</p>
+              {% endfor %}
+            </div>
+        {% endif %}
+      </div>
+
+      <div class="mb-4">
+        <label for="first_name" class="block text-gray-700 font-semibold"
+          >Измени имя</label
+        >
+        {{form.first_name}}
+        {% if form.first_name.errors %}
+        <div class="text-red-500 text-sm mt-1">
+          {% for error in form.first_name.errors %}
+          <p>{{ error }}</p>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+
+      <div class="mb-4">
+        <label for="email" class="block text-gray-700 font-semibold"
+          >Измени email </label
+        >
+        {{form.email}} {% if form.email.errors %}
+        <div class="text-red-500 text-sm mt-1">
+          {% for error in form.email.errors %}
+          <p>{{ error }}</p>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+
+      <div class="flex justify-center">
+        <button
+          type="submit"
+          class="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none"
+        >
+          Редактировать
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock creat %}

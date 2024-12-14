@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    {% block links %}{% endblock links %}
+</head>
+<body>
+    {% include "components/first_nav.html" %}
+    {% block search %}{% endblock search %}
+    {% block navigation %}{% endblock navigation %}
+    {% block shorts %}{% endblock shorts %}
+    {% block detal %}
+        {% include "components/catalog.html" %}
+        {% include "components/hot_news.html" %}
+    {% endblock detal %}
+    {% block positioninfo %}{% endblock positioninfo %}
+    {% include "components/application.html" %}
+    {% include "components/footer.html" %}
+
+</body>
+</html>

@@ -1,0 +1,198 @@
+.application-back{
+    /* overflow: hidden; */
+    background: #4361EE;
+    width: auto;
+    height: 260px;
+    margin: 200px 0 100px 0;
+    border-radius: 20px;
+
+}
+
+.application-info-flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.application-man{
+    position: relative;
+    margin: -97px 0 0 0 ;
+}
+
+.application-man2{
+    display: none;
+}
+
+.application-send-info{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.application-read-info2{
+    display: none;
+}
+
+.application-info-h1{
+    font-size: 36px;
+    font-weight: 600;
+    color: white;
+}
+
+.application-send-btn{
+    width: 246px;
+    height: 60px;
+    background: white;
+    color: #4361EE;
+    border-radius: 15px;
+}
+
+.massage-for-me{
+    display: none;
+}
+
+
+.application-read-info{
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 0;
+
+}
+
+.application-send-btn:hover{
+    background: rgb(235, 231, 231);
+    transition: 600ms;
+}
+
+@media (max-width:944px){
+    .application-info-h1{
+        font-size: 34px;
+    }
+
+    .application-send-btn{
+        width: 190px;
+        height: 50px;
+    }
+}
+
+@media (max-width:870px){
+    .application-info-h1{
+        font-size: 23px;
+    }
+
+    .application-send-btn{
+        width: 140px;
+        height: 50px;
+        font-size: 14px;
+    }
+    .application-read-info{
+        font-size: 16px;
+    }
+}
+
+@media (max-width:720px){
+    .application-send-info{
+        display: grid;
+        align-items: center;
+        justify-content: start;
+    }
+    .application-info-h1{
+        font-size: 26px;
+    }
+
+    .application-send-btn{
+        width: 220px;
+        height: 50px;
+        font-size: 14px;
+    }
+    .application-read-info{
+        font-size: 12px;
+    }
+}
+
+
+@media (max-width:680px){
+    .application-man{
+        display: none;
+    }
+    .application-back{
+        border: 1px solid #4361EE;
+        border-radius: 20px;
+        width: auto;
+        height: auto;
+        background: none;
+        margin: 50px 10px ;
+        padding: 40px 10px 0;
+    }
+    .massage-for-me{
+        display: block;
+        color: gray;
+        text-align: center;
+    }
+
+    .massage-for-me-img{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin: 5px 0 0 0;
+    }
+    
+    .application-info-flex{
+        /* display: grid; */
+
+    }
+
+    .application-info{
+    }
+    
+    .application-man2{
+        display: block;
+        margin: 40px 0 0 0;
+    }
+    
+    .application-send-info{
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .application-info-h1{
+        color: black;
+        font-size: 24px;
+        font-weight: 700;
+        span{
+            color: #4361EE;
+        }
+    }
+    
+    .application-send-btn{
+        width: 203px;
+        height: 46px;
+        background: #4361EE;
+        color: white;
+        border-radius: 15px;
+        /* margin: 0 0 0 35px; */
+
+    }
+
+    .application-read-info2{
+        display: block;
+        color: gray;
+        font-size: 16px;
+        font-weight: 600;
+        text-align: center;
+    }
+    
+    
+    .application-read-info{
+        display: none;
+    }
+    
+    .application-send-btn:hover{
+        background: #2447e1;
+    }
+    
+}

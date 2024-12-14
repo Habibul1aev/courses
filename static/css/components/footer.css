@@ -1,0 +1,106 @@
+.footer-back{
+    width: auto;
+    height: 318px;
+    background: #022F86;
+    padding: 54px 0 0 0;
+}
+
+.footer-all{
+    display: flex;
+    margin: 0 0 60px 0;
+}
+
+.footer-colm1{
+    display: grid;
+    gap: 30px;
+}
+
+.footer-colm1-number{
+    display: flex;
+    align-items: end;
+    gap: 5px;
+    color: white;
+    img{
+        margin: 0;
+    }
+}
+
+.footer-colm1-email{
+    display: flex;
+    align-items: end;
+    gap: 5px;
+    color: white;
+    margin: 0;
+}
+
+.programs{
+    color: white;
+}
+
+.programs-h1{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.programs-h2{
+    font-size: 18px;
+}
+.partners{
+    color: white;
+
+}
+.contacts-h1{
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+}
+.partners-h1{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.footer-line{
+    width: auto;
+    height: 1px;
+    background: white;
+}
+
+.sss{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+@media (max-width:870px){
+    .footer-colm3{
+        display: none;
+    }
+    .footer-line{
+        display: none;
+    }
+
+    .class1{
+        display: none;
+    }
+}
+
+@media (max-width:630px){
+    .footer-all{
+        display: grid;
+        margin: 0;
+        text-align: center;
+        gap: 20px;
+    }
+    .footer-back{
+        width: auto;
+        height: auto;
+    }
+    .class2{
+        text-align: center;
+    }
+    .sss{
+        padding: 20px 0 ;
+        justify-content: center;
+    }
+}

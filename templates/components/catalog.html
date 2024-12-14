@@ -1,0 +1,105 @@
+{% load static %}
+{% block links %}
+<link rel="stylesheet" href="{% static "..\static\css\components\catalog.css" %}">
+{% endblock links %}
+
+<div class="container">
+    <div class="body-filter">
+        <div class="body-filter-title m-0 flex">
+            {% if '/workspace/' in request.path %}
+                <h1 class='body-filter-title-h1' style='margin:0;'>CRUD</h1>
+                <div class="mt-[12px] ml-[15px]">
+                    <a href="{% url 'create' %}" class='m-0'><div class='w-[120px] h-[40px] m-0 flex items-center justify-center rounded-lg border border-[#4361EE]'><img src="{% static "..\static\img\add-button.png" %}" alt="" class='w-[21px] h-[21px] absolute'></div></a>
+                </div>
+            {% elif '/categories/2' in request.path%}
+                <h1 class='body-filter-title-h1'>Каталог курсов</h1>
+            {% else %}
+                <h1 class='body-filter-title-h1'>Каталог школ</h1>
+            {% endif %}
+        </div>  
+        
+        <div class="body-price-filter m-0">
+            <form action="" method='GET' class='form_for_price'>
+                <div class="sorting">
+                    <label for="min_or_max" class='min_or_max'>Сортировка</label>
+                    <select name="min_or_max" id="min_or_max" class='min_max'>
+                        <option value="1" {% if min_max == '1' %}selected{% endif %}>От низкой к высокой цене</option>
+                        <option value="2" {% if min_max == '2' %}selected{% endif %}>От высокой к низкой цене</option>
+                    </select>
+                </div>
+
+
+                <div class="bbb">
+                    <h1 class='bp'>Цена</h1>
+                    <div class="body-price">
+                        <h2>От</h2>
+                        <input type="number" name='min' class='min' value={% if min %}{{min}}{% else %} '1' {% endif %}>
+                        <h2>До</h2>
+                        <input type="number" name='max' class='max' value={% if max %}{{max}}{% else %} '750' {% endif %}>
+                    </div>
+                </div>
+
+                <div class="btn-price">
+                    <button type='submit'><img src="{% static "..\static\img\Icon.png" %}" alt=""></button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="cards">
+        {% for card in page_obj %}
+            <div class="one-card">
+                <div class="card-img">
+                    {% if '/workspace/' in request.path %}
+                        <div class="create-update-delete flex items-center justify-end pt-[2px] pb-[2px] pr-6 pl-4 absolute z-10 bg-gray w-[auto] h-[20px]">
+                            <a href="{% url 'update' id=card.id%}" class='m-0'><img src="{% static "..\static\img\refresh.png" %}" alt="" class='w-[21px] h-[21px] mr-2 bg-gray'></a>
+                            <a href="{% url "delete" id=card.id %}" class='m-0'><img src="{% static "..\static\img\bin.png" %}" alt="" class='w-[21px] h-[21px] mr-2 bg-gray'></a>
+                        </div>
+                        <img src="{{card.photo.url}}" alt="" class='h-[167px] w-[320px]'>
+                        <div class='reting'><img src="{% static "../static\img\🦆 icon _star_.png" %}" alt=""> {{card.averge_retings}} из 5</div>
+                    {% else %}
+                        <img src="{{card.photo.url}}" alt="">
+                        <div class='reting'><img src="{% static "../static\img\🦆 icon _star_.png" %}" alt=""> {{card.averge_retings}} из 5</div>
+                    {% endif %}
+                </div>
+                <div class="container-card">
+                    <div class="card-age-and-views">
+                        <div class="card-age">
+                            <span>От 16 лет</span>
+                        </div>
+                        <div class="card-views">
+                            <img class='card-icon' src="{% static "..\static\img\free-icon-eye-159604.png" %}" alt="">
+                            <span>{{card.views}}</span>
+                        </div>
+                    </div>
+                    <div class="card-title">
+                        <h1>{{card.title}}</h1>
+                    </div>
+                    <div class="card-description">
+                        <h3>{{card.description}}</h3>
+                    </div>
+                    <div class="card-price-and-more">
+                        <div class="card-price">
+                            <h2>{{card.price}} $</h2>
+                        </div>
+                        <div class="card-more">
+                            <a href="{% url "list" id=card.id %}">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <nav class="list-page">
+        {% for page in page_obj.paginator.page_range %}
+            {% if page_obj.number == page %}
+                <div class="pageee">
+                    <a class="pag" href="?page={{page}}">{{page}}</a>
+                </div>
+            {% elif page >= page_obj.number|add:-2 and page <= page_obj.number|add:2 %}
+                <div class="pageee">    
+                    <a class="pag" href="?page={{page}}">{{page}}</a>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </nav>
+</div>

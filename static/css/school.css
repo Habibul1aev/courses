@@ -1,0 +1,14 @@
+.back-search{
+    width: auto;
+    height: 177px;
+    background: #4C97F033;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width:680px){
+    .back-search{
+        height: auto;
+        padding: 20px 0;
+    }
+}

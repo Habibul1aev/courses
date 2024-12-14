@@ -1,0 +1,31 @@
+{% load static %}
+{% block links %}
+<link rel="stylesheet" href="{% static "../static/css/components/first_nav.css" %}">
+{% endblock links %}
+<div>
+    <div class='bgfont'>
+        <div class='container'>
+            <div class='nav'>
+                <div class='logo'><img src="{% static '../static/img/Group 38401.svg' %}" alt=""></div>
+                <div class='nav-select'>
+                    <a href="{% url "home" %}" class='home'>Главная</a>
+                    {% for i in categorys %}
+                        <a href="{% url "categories" id=i.id %}">{{i.title}}</a>
+                    {% endfor %}
+                </div>
+                <div class='socials-links'>
+                    <img src="{% static 'img/socials.svg' %}"     alt="" class='socials'>
+                    <img src="{% static 'img/socials (1).svg' %}" alt="" class='socials'>
+                    <img src="{% static 'img/socials (2).svg' %}" alt="" class='socials'>
+                    <img src="{% static 'img/socials (3).svg' %}" alt="" class='socials'>
+                    <a href="{% url "workspace" %}"><img src="{% static '..\static\img\workspace.png' %}" alt="" class='w-[41px] h-[41px]'></a>
+                    <a href="{% url "registration" %}"><img src="{% static '../static\img\profile-user.png' %}" alt="" class='w-[41px] h-[41px]'></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

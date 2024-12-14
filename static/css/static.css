@@ -1,0 +1,138 @@
+.smeagl{
+    display: grid;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    text-align: center;
+}
+
+.smeagl-h2{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.smeagl-h1{
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.smeagl-block{
+    padding: 0 10px;
+    width: -webkit-fill-available;
+    height: 54px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.smeagl-btn{
+    background: #4361EE;
+    width: 238px;
+    height: 54px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.smeagl-btn:hover{
+    background: white;
+    color: #4361EE;
+
+    border: 1px solid #4361EE;
+    transition: 700ms;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 50px 0;
+}
+td {
+    border: 1px solid black;
+    width: 50px;
+    height: 30px;
+    text-align: center;
+}
+
+.table-h1{
+    font-size: 26px;
+    font-weight: 600;
+    margin: 50px;
+}
+
+.sbory-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 0 10px 10px 10px  ;
+}
+
+.sbory-h1{
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+    .table-h1 {
+        font-size: 20px;
+        margin: 20px;
+    }
+
+    table {
+        width: 100%;
+        margin: 20px 0;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    td {
+        font-size: 12px;
+        padding: 8px;
+        word-wrap: break-word;
+    }
+
+    .sbory-title{
+        font-size: 20px;
+        margin: 10px 0;
+    }
+}
+
+/* Для экранов шириной до 480px (мобильные устройства) */
+@media screen and (max-width: 480px) {
+    .table-h1 {
+        font-size: 18px;
+        margin: 15px;
+    }
+
+    table {
+        width: 100%;
+        margin: 15px 0;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch; /* для smooth scroll на iOS */
+    }
+
+    td {
+        font-size: 10px;
+        padding: 6px;
+    }
+
+
+    /* Сделать таблицу прокручиваемой по горизонтали */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+

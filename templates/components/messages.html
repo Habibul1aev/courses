@@ -1,0 +1,17 @@
+{% if messages %}
+    {% for message in messages %}
+        <div class="mb-3 mt-4
+            {% if message.tags == 'error' %}
+                bg-red-800 text-red-100 border-l-4 border-red-600 w-[419px] mt-[20px] ml-0 mr-0 mb-[20px]
+            {% elif message.tags == 'warning' %}
+                bg-yellow-800 text-yellow-100 border-l-4 border-yellow-600 w-[419px] mt-[20px] ml-0 mr-0 mb-[20px]
+            {% elif message.tags == 'success' %}
+                bg-green-800 text-green-100 border-l-4 border-green-600 w-[419px] mt-[20px] ml-0 mr-0 mb-[20px]
+            {% else %}
+                bg-blue-800 text-blue-100 border-l-4 border-blue-600 w-[419px] mt-[20px] ml-0 mr-0 mb-[20px]
+            {% endif %}
+            p-4" role="alert">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endif %}

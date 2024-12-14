@@ -1,0 +1,117 @@
+{% extends "workspace/base.html" %}
+
+{% block title %}Login{% endblock title %}
+
+{% block creat %}
+{% if not user.is_authenticated %}
+    <div class="flex justify-center items-center min-h-screen bg-gray-100 pt-[20px] pb-[20px]">
+        <div class="w-full max-w-md bg-white p-8 rounded-lg shadow-lg">
+            <h2 class="text-3xl font-semibold text-center text-gray-800 mb-6">Регистрация</h2>
+            <form action="{% url 'registration' %}" method="POST" novalidate>
+                {% csrf_token %}
+                <div class="mb-4">
+                    <label for="username" class="block text-gray-700 font-semibold">Ник пользователя</label>
+                    {{form.username}}
+                    {% if form.username.errors %}
+                        <div class="text-red-500 text-sm mt-1">
+                            {% for error in form.username.errors %}
+                                <p>{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700 font-semibold">Имя пользователя</label>
+                    {{form.first_name}}
+                    {% if form.first_name.errors %}
+                        <div class="text-red-500 text-sm mt-1">
+                            {% for error in form.first_name.errors %}
+                                <p>{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700 font-semibold">Электронная почта</label>
+                    {{form.email}}
+                    {% if form.email.errors %}
+                        <div class="text-red-500 text-sm mt-1">
+                            {% for error in form.email.errors %}
+                                <p>{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+
+                <div class="mb-4">
+                    <label for="password" class="block text-gray-700 font-semibold">Пароль</label>
+                    {{form.password1}}
+                    {% if form.password1.errors %}
+                        <div class="text-red-500 text-sm mt-1">
+                            {% for error in form.password1.errors %}
+                                <p>{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+
+                <div class="mb-6">
+                    <label for="confirm_password" class="block text-gray-700 font-semibold">Подтвердите пароль</label>
+                    {{form.password2}}
+                    {% if form.password2.errors %}
+                        <div class="text-red-500 text-sm mt-1">
+                            {% for error in form.password2.errors %}
+                                <p>{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+
+                <div class="mb-6">
+                    <button type="submit" class="w-full bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">Зарегистрироваться</button>
+                </div>
+
+                <div class="text-center">
+                    <p class="text-gray-600">Уже есть аккаунт? <a href="{% url "login" %}" class="text-blue-500 hover:underline">Войти</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+{% else %}
+    <div class="flex justify-center items-center min-h-screen bg-gray-100">
+        <div class="w-full max-w-4xl bg-white p-8 rounded-lg shadow-lg">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="flex-shrink-0 mb-6 lg:mb-0 lg:mr-8">
+                    <img src="" alt="" class="w-32 h-32 rounded-full border-4 border-blue-500">
+                </div>
+
+                <div class="text-center lg:text-left">
+                    <h2 class="text-3xl font-semibold text-gray-800">Привет, {{ user.username }}!</h2>
+                    <p class="text-gray-600 mt-2">Добро пожаловать в ваш профиль. Здесь вы можете изменить свои данные.</p>
+
+                    <div class="mt-6 space-y-4">
+                        <div>
+                            <strong class="text-gray-700">Имя:</strong> <span class="text-gray-600">{% if user.get_full_name %}{{ user.get_full_name }}{% else %}{{user.username}}{% endif %}</span>
+                        </div>
+                        <div>
+                            <strong class="text-gray-700">Электронная почта:</strong> <span class="text-gray-600">{% if user.email %}{{ user.email }}{% else %}Без почты{% endif %}</span>
+                        </div>
+                        <div>
+                            <strong class="text-gray-700">Дата регистрации:</strong> <span class="text-gray-600">{{ user.date_joined|date:"d F Y" }}</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 flex justify-center lg:justify-start space-x-4">
+                        <a href="{% url "change_profile" %}" class="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">Редактировать профиль</a>
+                        <a href="{% url "change_password" %}" class="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">Изменить пароль</a>
+                        <a href="{% url "logout_prof" %}" class="px-6 py-3 bg-gray-500 text-white rounded-lg hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500">Выйти</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endif %}
+{% endblock creat %}
+

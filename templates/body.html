@@ -1,0 +1,152 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block links %}
+<link rel="stylesheet" href="{% static "../static/css/body.css" %}">
+{% endblock links %}
+
+
+{% block navigation %}
+<div class="block2">
+    <div class="container">
+        <div class="mentor">
+            <h1 class='mentor-info'>Ментор-пространство,
+                <br>где поддержат</h1>
+        </div>
+
+        <div class="search">
+            <form action="" method='GET' class='form-search'>
+                {{filter_set.form.as_p}}
+
+                <div class='flex items-center'>
+                    <button type='submit' class='btn-search'><img src="{% static "../static/img/Icon.png" %}" class='btn-search2' alt=""><h3 class='h3-btn'>Поиск</h3></button>
+                </div>
+            </form>
+        </div>
+
+        <div class="catalog">
+            <div><img src="{% static "../static/img/Ellipse 3.png" %}" alt=""></div>
+            <div><p>Каталог лучших наставников в любых сферах</p></div>
+        </div>
+    </div>
+</div>
+{% endblock navigation %}
+
+
+
+{% block shorts %}
+<div class="container">
+    <div class='youtube'>
+        <div class="shorts-content">
+            <h1 class='shorts-content-h1'>Меня зовут Максим. Автор Youtube канала
+                «Русский Филиппинец»</h1>
+            <h2 class='shorts-content-p'>Я создал этот сервис для того, чтобы все желающие могли быстро выбрать школу на Филиппинах и выучить английский язык быстро и просто. </h2>
+        </div>
+        <div class="shorts">
+            <iframe class='video' src="https://www.youtube.com/embed/crB0IduLmi0?si=4JyBewuv7zENALhZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="shorts">
+            <iframe class='video' src="https://www.youtube.com/embed/afDsX_x1DT0?si=ccb-Mrli4uFy0s-l" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="shorts">
+            <iframe class='video' src="https://www.youtube.com/embed/aFWtGzAxIkw?si=cs8lJHwrh-eYJBPZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+{% endblock shorts %}
+
+
+
+
+{% block positioninfo %}
+<div class="container">
+    <div class="hot-h1-and-all-apps">
+        <div class="hot-h1">
+            <h1>Полезная информация</h1><img class='fire' src="{% static "..\static\img\Fire Flame 1.png" %}" alt="">
+        </div>
+        <div class="all-apps">
+            <a href="">Читать большее</a>
+        </div>
+    </div>
+
+    <div class="hot-cards-all">
+        <div class="hot-cards-info">
+            <div class="hot-card-img">
+                <img src="{% static "../static\img\Rectangle 21.png" %}" alt="">
+            </div>
+            <div class="hot-card-h1">
+                <h1>Полезная информация
+                    о которой нужно сказать</h1>
+            </div>
+            <div class="hot-card-p">
+                <h3>June 26, 2023</h3>
+            </div>
+        </div>
+        <div class="hot-cards-info">
+            <div class="hot-card-img">
+                <img src="{% static "../static\img\Rectangle 21.png" %}" alt="">
+            </div>
+            <div class="hot-card-h1">
+                <h1>Полезная информация
+                    о которой нужно сказать</h1>
+            </div>
+            <div class="hot-card-p">
+                <h3>June 26, 2023</h3>
+            </div>
+        </div>
+        <div class="hot-cards-info">
+            <div class="hot-card-img">
+                <img src="{% static "../static\img\Rectangle 21.png" %}" alt="">
+            </div>
+            <div class="hot-card-h1">
+                <h1>Полезная информация
+                    о которой нужно сказать</h1>
+            </div>
+            <div class="hot-card-p">
+                <h3>June 26, 2023</h3>
+            </div>
+        </div>
+        <div class="hot-cards-info">
+            <div class="hot-card-img">
+                <img src="{% static "../static\img\Rectangle 21.png" %}" alt="">
+            </div>
+            <div class="hot-card-h1">
+                <h1>Полезная информация
+                    о которой нужно сказать</h1>
+            </div>
+            <div class="hot-card-p">
+                <h3>June 26, 2023</h3>
+            </div>
+        </div>
+        <div class="hot-cards-info">
+            <div class="hot-card-img">
+                <img src="{% static "../static\img\Rectangle 21.png" %}" alt="">
+            </div>
+            <div class="hot-card-h1">
+                <h1>Полезная информация
+                    о которой нужно сказать</h1>
+            </div>
+            <div class="hot-card-p">
+                <h3>June 26, 2023</h3>
+            </div>
+        </div>
+        <div class="hot-cards-info">
+            <div class="hot-card-img">
+                <img src="{% static "../static\img\Rectangle 21.png" %}" alt="">
+            </div>
+            <div class="hot-card-h1">
+                <h1>Полезная информация
+                    о которой нужно сказать</h1>
+            </div>
+            <div class="hot-card-p">
+                <h3>June 26, 2023</h3>
+            </div>
+        </div>
+        <div class="loren-more">
+            <a href="">Читать больше</a>
+        </div>
+    </div>
+
+    
+</div>
+{% endblock positioninfo %}

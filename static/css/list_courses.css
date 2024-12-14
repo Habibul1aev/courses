@@ -1,0 +1,548 @@
+/* .back-search{
+    width: auto;
+    height: 177px;
+    background: #4C97F033;
+    display: flex;
+    align-items: center;
+}
+
+.form-search{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: auto;
+    height: 64px;
+    border-radius: 50px;
+    background: white;
+    padding: 0 15px;
+    gap: 7px;
+}
+
+select{
+    outline: none;
+}
+
+.h3-btn{
+    display: none;
+}
+
+
+.btn-search{
+    width: 50px;
+    height: 50px;
+    background: #4361EE;
+    border-radius: 50%;
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.btn-search2{
+    width: 25px;
+    height: 25px;
+}
+
+.btn-p{
+    display: none;
+}
+
+
+@media (max-width:770px){
+    
+    .form-search{
+        font-size: 13px;
+    }
+    
+}
+
+@media (max-width:680px){
+    .h3-btn{
+        display: block;
+    }
+    .form-search{
+        display: block;
+        width: auto;
+        height: auto;
+        border-radius: 25px;
+        padding: 15px 15px;
+        font-size: 15px;
+    }
+
+    p{
+        width: auto;
+        height: 60px;
+        border: 1px solid black;
+        display: grid;
+        justify-content: start;
+        text-align: start;
+        padding: 0 0 0 15px;
+    }
+
+    p:first-of-type{
+        border-radius: 15px 15px 0 0;
+    }
+
+    p:last-of-type{
+        border-radius: 0 0 15px 15px
+    }
+
+    label{
+        display: contents;
+    }
+    
+    .btn-search{
+        margin: 10px 0;
+        width: 100%;
+        height: 51px;
+        border-radius: 10px;
+    }
+    
+    .btn-search2{
+        display: none;
+    }
+
+    .btn-p{
+        display: block;
+        color: white;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    
+}
+
+@media (max-width:370px){
+    .block2{
+        padding: 20px 0;
+        height: auto;
+    }
+
+    .mentor{
+        font-size: 42px;
+    }
+}
+
+@media (max-width:680px){
+    .back-search{
+        height: auto;
+        padding: 20px 0;
+    }
+}
+ */
+
+
+.list-name-and-share{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 55px 10px 0 10px;
+}
+
+.list-name{
+    margin: 0;
+}
+
+.stars{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+}
+
+.stars > div{
+    margin: 0;
+}
+
+.list-name > h1{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.location-and-reting{
+    color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+}
+
+
+.list-share{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    width: 171px;
+    height: 47px;
+    border: 1px solid gray;
+    gap: 5px;
+}
+.list-share > img{
+    margin: 0;
+}
+.list-share:hover{
+    border: 1px solid black;
+}
+
+.photo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 30px 0;
+}
+
+.big-photo > img{
+    width: 600px;
+    height: 400px;
+    margin: 0;
+}
+
+.littel-photos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.littel-photos > img{
+    width: 290px;
+    height: 190px;
+}
+
+.info-school-list{
+    display: flex;
+    margin: 0;
+    justify-content: space-between;
+    gap: 20px;
+}
+.info-list{
+    margin: 0;
+}
+
+.info-category{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 40px;
+    color: #667085;
+    margin: 0;
+
+}
+
+.info-category > div:hover{
+    border-bottom:1px solid #4361EE;
+    color: #4361EE;
+    transition: 500ms;
+    transform: scale(1.1);
+}
+
+.o-school > h1{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.o-school{
+    padding: 40px 10px 10px 10px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.zayvka{
+    width: 357px;
+    height: 557px;
+    border: 1px solid #667085;
+    border-radius: 10px;
+    display: grid;
+    margin: 0;
+}
+
+.kurs-and-dol{
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin: 0 0 -55px 0px;
+    padding: 80px 10px 0 10px
+}
+.kurs-and-dol2{
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin:-40px 0 0px 0px;
+    padding: 0 10px 0 10px;
+}
+
+.kurs-and-dol2 > h1{
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.kurs-and-dol2 > h2{
+    font-size: 24px;
+    margin: 0;
+    
+}
+
+.kurs-and-dol > h1{
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.kurs-and-dol > h2{
+    font-size: 24px;
+    margin: 0;
+    
+}
+
+
+.kurs-and-dol3 > h1{
+    font-size: 20px;
+    margin: 0;
+}
+
+.kurs-and-dol3 > h2{
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+    
+}
+
+.selsct-zayv{
+    margin: 0;
+    padding: 5px 10px 10px 10px
+}
+
+.zyavkas{
+    width: 335px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 5px 0 ;
+}
+.zyavkas2{
+    width: 335px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 5px 0 ;
+}
+
+.selsct-zayv2{
+    margin: -60px 0px 0 12px;
+}
+
+.kurs-and-dol3{
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin:-30px 0 0px 0px;
+    padding: 0 10px 0 10px;
+}
+
+.btn-select{
+    width: 315px;
+    height: 40px;
+    background: #4361EE;
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cours-selects{
+    margin: 40px 0;
+}
+
+.cours-selects > h1{
+    font-size: 42px;
+    font-weight: 600;
+    text-align: start;
+    margin: 0 0 20px 0;
+}
+
+.galereay{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+}
+
+.galereay>img{
+    width: 300px;
+    height: 200px;
+}
+
+.cours-select-options{
+    width: auto;
+    height: 54px;
+    border-radius: 10px;
+    border: 1px solid #667085;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 0 0 0 20px;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.cours-select-options > img{
+    background: gray;
+    border-radius: 5px;
+    margin: 0;
+}
+
+.photo-galereay>h1{
+    font-size: 42px;
+    font-weight: 600;
+    text-align: start;
+    margin: 0 0 20px 0;
+}
+
+.line-geolacation{
+    width: auto;
+    height: 1px;
+    background: #667085;
+    margin: 40px 0 0;
+}
+
+.geolacation>h1{
+    font-size: 42px;
+    font-weight: 600;
+    text-align: start;
+}
+
+.geolacation>h3{
+    color: #667085;
+    font-size: 14px;
+}
+
+.carta{
+    width: auto;
+    height: 319px;
+    background: gray;
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 270px 0 0 0;
+}
+
+.google-carta{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.rating>h1{
+    font-size: 42px;
+    font-weight: 600;
+    text-align: start;  
+}
+
+.rating>h3{
+    font-size: 16px;
+    margin: 0;
+    color: gray;
+}
+
+/* .star{
+    font-size: 24px;
+    color: #ccc;
+}
+
+.star.filled{
+    color: #f5b300;
+} */
+
+
+@media (max-width:960px){
+    .info-school-list{
+        display: grid;
+    }
+}
+
+
+@media (max-width:680px){
+    
+    .photo{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        overflow-y: hidden;
+        position: relative;
+    }
+
+    .big-photo > img{
+        width: 790px;
+        height: 260px;
+    }
+    .littel-photos{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    .littel-photos > img{
+        width: 390px;
+        height: 260px;
+    }
+    .list-share{
+        display: none;
+    }
+
+    .info-school-list{
+        display: grid;
+        
+    }
+
+
+}
+
+@media (max-width:600px){
+    .info-category{
+        display: none;
+    }
+}
+
+@media (max-width:490px){
+    .list-name > h1{
+        font-size: 26px;
+    }
+    .list-name-and-share{
+        padding: 55px 10px 0 10px;
+    }
+    .big-photo > img{
+        width: 790px;
+        height: 220px;
+    }
+    .littel-photos > img{
+        width: 290px;
+        height: 220px;
+    }
+    .google-carta>div{
+        display: none;
+    }
+    .line-geolacation{
+        display: none;
+    }
+}
+
+@media (max-width:370px){
+    .zayvka{
+        width: 300px;
+    }
+
+    .zyavkas{
+        width: 276px;
+    }
+
+    .zyavkas2{
+        width: 276px;
+    }
+
+    .btn-select{
+        width: 280px;
+    }
+}
+

@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workspace</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    {% block links %}{% endblock links %}
+</head>
+<body>
+    {% include "components/first_nav.html" %}
+    {% include "components/messages.html" %}
+    {% block creat %}
+        {% block search %}{% endblock search %}
+        {% include "components/catalog.html" %}
+    {% endblock creat %}
+    {% block update %}{% endblock update %}
+    {% include "components/footer.html" %}
+</body>
+</html>

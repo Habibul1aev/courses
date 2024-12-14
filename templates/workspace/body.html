@@ -1,0 +1,25 @@
+{% extends "workspace/base.html" %}
+{% load static %}
+
+{% block links %}
+<link rel="stylesheet" href="{% static "../static/css/workspace/cards.css" %}">
+{% endblock links %}
+
+{% block search %}
+    <div class="back-search">
+        <div class="container">
+            <div class="search">
+                <form action="" method='GET' class='form-search'>
+                    {{filter_set.form.as_p}}
+                    <div class='flex items-center'>
+                        <button type='submit' class='btn-search'><img src="{% static "../static/img/Icon.png" %}" class='btn-search2' alt=""><h3 class='h3-btn'>Поиск</h3></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock search %}
+
+
+
+
